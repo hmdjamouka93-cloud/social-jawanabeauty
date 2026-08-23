@@ -25,117 +25,110 @@
         }
         .container {
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             text-align: center;
-        }
-        .profile-card {
             background: #ffffff;
-            padding: 30px 20px;
+            padding: 25px 20px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e0d5c1;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
-        /* عرض اللوجو بأبعاده الأصلية بدون إطار مدور */
+        /* تعديل حجم اللوغو ليناسب الهاتف تماماً وبشكل دائري فخم */
         .logo-container {
-            width: 100%;
-            max-width: 180px;
-            margin: 0 auto 20px auto;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
         }
-        .logo-img {
+        .logo-container img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            border-radius: 8px;
         }
         h1 {
-            color: #b8860b;
-            font-size: 24px;
-            margin-bottom: 8px;
+            color: #b38f27;
+            font-size: 22px;
+            margin-bottom: 5px;
             font-weight: bold;
         }
         p.subtitle {
             color: #777777;
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 25px;
         }
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
+            width: 100%;
         }
-        .social-button {
+        .link-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             padding: 14px 20px;
             border-radius: 12px;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
             color: #ffffff;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            font-size: 15px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
         }
-        .social-button:active {
+        .link-btn:active {
             transform: scale(0.98);
         }
-        /* زر فيسبوك */
-        .facebook {
-            background-color: #1877F2;
-        }
-        /* زر انستغرام */
-        .instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-        /* زر تيك توك */
-        .tiktok {
-            background-color: #000000;
-        }
-        .social-button i {
-            font-size: 22px;
+        /* ألوان الأزرار والأيقونات */
+        .btn-facebook { background-color: #1877F2; }
+        .btn-instagram { background: linear-space(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); background: linear-gradient(45deg, #f09433 0%, #e6683c 50%, #dc2743 100%); }
+        .btn-tiktok { background-color: #000000; color: #ffffff; border: 1px solid #333; }
+        
+        .link-btn i {
+            font-size: 20px;
         }
         .footer {
             margin-top: 25px;
-            font-size: 12px;
-            color: #aaa;
+            color: #999999;
+            font-size: 11px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="profile-card">
-            
-            <!-- صورة اللوجو الأصلية -->
-            <div class="logo-container">
-                <img src="Messenger_creation_C72ECA9C-FFD4-4D4D-A5E0-488C3CECA91A.jpeg" alt="شعار صالون جوانا بيوتي" class="logo">
-
-            
-            <h1>صالون جوانا بيوتي</h1>
-            <p class="subtitle">تابعونا على صفحاتنا الرسمية</p>
-
-            <div class="links-container">
-                <!-- رابط فيسبوك -->
-                <a href="https://www.facebook.com/share/1CMukKAUBj/?mibextid=wwXIfr" target="_blank" class="social-button facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <span>صفحتنا على فيسبوك</span>
-                </a>
-
-                <!-- رابط انستغرام -->
-                <a href="https://www.instagram.com/jawana.qr?igsh=MTg2ejM5N3IxazBybw==" target="_blank" class="social-button instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                    <span>حسابنا على انستغرام</span>
-                </a>
-
-                <!-- رابط تيك توك -->
-                <a href="https://www.tiktok.com/@jawanabeauty?_r=1&_t=ZN-98qjejJZS2o" target="_blank" class="social-button tiktok">
-                    <i class="fa-brands fa-tiktok"></i>
-                    <span>حسابنا على تيك توك</span>
-                </a>
-            </div>
-
+        <!-- صورة اللوغو -->
+        <div class="logo-container">
+            <img src="Messenger_creation_C72ECA9C-FFD4-4D4D-A5E0-488C3CECA91A.jpeg" alt="شعار صالون جوانا بيوتي">
         </div>
+
+        <h1>صالون جوانا بيوتي</h1>
+        <p class="subtitle">تابعونا على صفحاتنا الرسمية</p>
+
+        <!-- روابط التواصل -->
+        <div class="links-container">
+            <!-- فيسبوك -->
+            <a href="https://www.facebook.com/share/1bbkN8Lw1H/?mibextid=wwXIfr" target="_blank" class="link-btn btn-facebook">
+                <i class="fa-brands fa-facebook"></i>
+                <span>صفحتنا على فيسبوك</span>
+            </a>
+
+            <!-- إنستغرام -->
+            <a href="https://www.instagram.com/asraraljamal.qr" target="_blank" class="link-btn btn-instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>حسابنا على إنستغرام</span>
+            </a>
+
+            <!-- تيك توك -->
+            <a href="https://www.tiktok.com/@asraraljamal.qr?_r=1&_d=secCgYIASAHKAESPgo8jjzLDZ%2Fki3fj2edDSDk9BKziBAhkiQFXJi8Pw%2F5uiqGX5gE%2FAgeReGXTjoKRzJYd0OGs4XRwspIZCiG8GgA%3D&_svg=2&checksum=17a0276ec041d7c307de1e060a84242eb7849f3f39a224ba7e22bd22b0876fd9&item_author_type=2&reflow_sign_scene=7&rgssign=8.1.-f0dogNrB3F-TKPLnnftcg&sec_uid=MS4wLjABAAAAnTa-yrx5s_66cAIlgOttj-M0VtAuAjtDbXJbMSoBYZOw5AJmN3jvf6NXHGsBaz7D&sec_user_id=MS4wLjABAAAA07nTi0KA5h3qnKVkFbV3BWdA4GTAdxmOdpPBL5YMlohPhIy6DhaKmJYkP6PyWVMb&share_app_id=1233&share_author_id=7042786667506484230&share_link_id=98315448-88A6-461F-90B0-68C4928A95E6&share_region=DZ&share_scene=1&sharer_language=fr&social_share_type=5&source=h5_m&timestamp=1787522536&tt_from=copy&u_code=eh3j136jj18ehc&ug_btm=b6880%2Cb5836&user_id=7432705274891617313&utm_campaign=client_share&utm_medium=ios&utm_source=copy" target="_blank" class="link-btn btn-tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>حسابنا على تيك توك</span>
+            </a>
+        </div>
+
         <div class="footer">
             <p>جميع الحقوق محفوظة © صالون جوانا بيوتي</p>
         </div>
